@@ -1,0 +1,40 @@
+document.addEventListener("DOMContentLoaded", () => {
+  {“HTML sayfası tamamen yüklendikten sonra JavaScript çalışsın.”}
+
+1: DOM elemanlarını seçme:
+Kodun başında çok sayıda getElementById var:Bunların amacı:
+
+HTML içindeki elemanları JavaScript’e bağlamak.
+
+Yani JavaScript bu elemanlarla konuşabiliyor:
+
+ekranları açıp kapatıyor
+yazıları değiştiriyor
+butonları aktif/pasif yapıyor
+tıklamaları dinliyor 
+- Önce oyunda kullanacağım tüm HTML elemanlarını seçtim. Böylece JavaScript ile ekran değiştirme, mesaj gösterme ve oyun alanını kontrol etme işlemlerini yapabildim.-
+
+2: Sabitler ve oyun durumu:
+const boardRows = 10;
+const boardCols = 10;
+const boardSize = boardRows * boardCols;
+Burada oyun ile ilgili temel veriler tanimlaniyor.
+
+let playerShips = [];
+let computerShips = [];
+
+playerShips: Oyuncunun yerleştirdiği gemilerin bilgilerini tutacak dizi.
+computerShips: Bilgisayarın (bot) gemilerinin bilgilerini tutacak dizi.
+Şu anda boşlar, ileride gemiler eklenecek.
+
+3. Ülke seçimi sistemi:
+
+selectedPlayerCountry → Oyuncunun seçtiği ülke bilgisini tutar.
+selectedEnemyCountry → Rakip (düşman) ülkenin bilgisini tutar.
+
+Başlangıçta ikisi de null çünkü oyuncu henüz hiçbir ülke seçmedi.
+
+
+4. showScreen() fonksiyonu:
+showScreen fonksiyonunu ekran geçişlerini yönetmek için yazdım. Önce bütün ekranları gizliyor, sonra göstermek istediğim ekranı aktif yapıyor. Böylece tek sayfa içinde farklı aşamalar arasında geçiş yapabiliyorum.
+
